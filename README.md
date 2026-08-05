@@ -65,3 +65,4 @@ Connect the repo to [Vercel](https://vercel.com) or [Netlify](https://netlify.co
 
 - **Build command:** `npm run build`
 - **Output directory:** `dist`
+# tsx-mern-06Aug2026
