@@ -30,6 +30,11 @@ export function CharacterCard({ character, onClick }: CharacterCardProps) {
           alt={character.name}
           className="card-image"
           loading="lazy"
+          onError={e => {
+            const img = e.currentTarget;
+            img.onerror = null;
+            img.src = `https://picsum.photos/seed/sw-err-${character.name.length}/300/200`;
+          }}
         />
         <div className="card-overlay">
           <span className="card-overlay-text">View Details</span>

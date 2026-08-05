@@ -61,7 +61,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, scheduleRefresh]);
 
   const login = async (username: string, password: string): Promise<void> => {
-    if (username !== MOCK_CREDENTIALS.username || password !== MOCK_CREDENTIALS.password) {
+    if (username.trim() !== MOCK_CREDENTIALS.username || password.trim() !== MOCK_CREDENTIALS.password) {
       throw new Error('Invalid username or password');
     }
     const token = createMockJWT(username, 300); // 5 min

@@ -36,8 +36,8 @@ export default function App() {
 
       <main className="main-content">
         <div className="hero">
-          <h1 className="hero-title">Star Wars Characters</h1>
-          <p className="hero-subtitle">Explore the galaxy&apos;s most iconic characters</p>
+          <h1 className="hero-title">Star Wars Universe</h1>
+          <p className="hero-subtitle">A long time ago in a galaxy far, far away</p>
         </div>
 
         <SearchFilter filters={filters} onChange={handleFilterChange} />
@@ -48,22 +48,25 @@ export default function App() {
         {!loading && !error && (
           <>
             <div className="results-info">
-              {filtered.length > 0 ? (
-                <span>{filtered.length} character{filtered.length !== 1 ? 's' : ''} found</span>
-              ) : (
-                <span>No characters match your filters</span>
-              )}
+              <span>{filtered.length} character{filtered.length !== 1 ? 's' : ''} found</span>
             </div>
 
-            <div className="characters-grid">
-              {filtered.map(character => (
-                <CharacterCard
-                  key={character.url}
-                  character={character}
-                  onClick={setSelectedCharacter}
-                />
-              ))}
-            </div>
+            {filtered.length === 0 ? (
+              <div className="empty-state">
+                <span className="empty-icon">🔭</span>
+                <p>No characters found. Try adjusting your search or filters.</p>
+              </div>
+            ) : (
+              <div className="characters-grid">
+                {filtered.map(character => (
+                  <CharacterCard
+                    key={character.url}
+                    character={character}
+                    onClick={setSelectedCharacter}
+                  />
+                ))}
+              </div>
+            )}
 
             {!isFiltering && (
               <Pagination

@@ -44,6 +44,8 @@ export function LoginModal({ onClose }: LoginModalProps) {
               onChange={e => setUsername(e.target.value)}
               required
               autoFocus
+              autoComplete="off"
+              spellCheck={false}
             />
           </div>
           <div className="form-field">
@@ -54,6 +56,7 @@ export function LoginModal({ onClose }: LoginModalProps) {
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
+              autoComplete="new-password"
             />
           </div>
           {error && <p className="login-error">{error}</p>}

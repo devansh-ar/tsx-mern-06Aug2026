@@ -115,7 +115,7 @@ export function CharacterModal({ character, onClose }: CharacterModalProps) {
               </div>
               <div className="detail-row">
                 <dt>Residents</dt>
-                <dd>{homeworld.residents.length}</dd>
+                <dd>{homeworld.residents?.length ?? 0}</dd>
               </div>
             </dl>
           )}
