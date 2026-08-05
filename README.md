@@ -1,5 +1,7 @@
 # Star Wars Character App
 
+**Live Demo:** [https://astonishing-alpaca-32d99a.netlify.app](https://astonishing-alpaca-32d99a.netlify.app)
+
 A React + TypeScript app to explore Star Wars characters using the [SWAPI](https://swapi.dev) public API.
 
 ## Features
@@ -61,7 +63,7 @@ The token expires after 5 minutes with a silent refresh scheduled 30 seconds bef
 
 ## Deployment
 
-Connect the repo to [Vercel](https://vercel.com) or [Netlify](https://netlify.com).
+Hosted on **Netlify**: [https://astonishing-alpaca-32d99a.netlify.app](https://astonishing-alpaca-32d99a.netlify.app)
 
 - **Build command:** `npm run build`
 - **Output directory:** `dist`
